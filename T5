@@ -1,0 +1,40 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    // variabel penting
+    string namapelanggan;
+    int jumlahpakaian;
+    double tarif = 5000;
+
+    // input dari user
+    cout << "=== Program Laundry ===" << endl;
+    cout << "Masukan Nama Pelanggan : ";
+    getline(cin, namapelanggan);
+    cout << "Masukan Jumlah Pakaian : ";
+    cin >> jumlahpakaian;
+
+    // hitung total biaya
+    double total = jumlahpakaian * tarif;
+
+    // tentukan jenis layanan
+    string layanan;
+    if (jumlahpakaian <= 10) {
+        layanan = "Regular";
+    } else if (jumlahpakaian <= 20) {
+        layanan = "Express";
+    } else {
+        layanan = "Kapasitas mesin penuh, pisahkan cucian!";
+    }
+
+    // tampilkan data
+    cout << "\n=== Data Laundry ===" << endl;
+    cout << "Nama Pelanggan   : " << namapelanggan << endl;
+    cout << "Jumlah Pakaian   : " << jumlahpakaian << endl;
+    cout << "Tarif per Pakaian: Rp " << tarif << endl;
+    cout << "Total Biaya      : Rp " << total << endl;
+    cout << "Jenis Layanan    : " << layanan << endl;
+
+    return 0;
+}
