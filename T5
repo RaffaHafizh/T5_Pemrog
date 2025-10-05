@@ -1,30 +1,30 @@
-#include <iostream>
-#include <string>
-using namespace std;
+#include <iostream>      // Library untuk input dan output (cout, cin)
+#include <string>        // Library untuk tipe data string
+using namespace std;     // Agar bisa menggunakan cout, cin tanpa prefix std::
 
 int main() {
     // variabel penting
-    string namapelanggan;
-    int jumlahpakaian;
-    double tarif = 5000;
+    string namapelanggan;     // Menyimpan nama pelanggan
+    int jumlahpakaian;        // Menyimpan jumlah pakaian yang dicuci
+    double tarif = 6000;      // Menyimpan tarif per pakaian (Rp 6000)
 
     // input dari user
     cout << "=== Program Laundry ===" << endl;
     cout << "Masukan Nama Pelanggan : ";
-    getline(cin, namapelanggan);
+    getline(cin, namapelanggan);   // Membaca input nama (termasuk spasi)
     cout << "Masukan Jumlah Pakaian : ";
-    cin >> jumlahpakaian;
+    cin >> jumlahpakaian;          // Membaca jumlah pakaian (angka)
 
     // hitung total biaya
-    double total = jumlahpakaian * tarif;
+    double total = jumlahpakaian * tarif;  // Menghitung total biaya laundry
 
     // tentukan jenis layanan
-    string layanan;
-    if (jumlahpakaian <= 10) {
-        layanan = "Regular";
-    } else if (jumlahpakaian <= 20) {
-        layanan = "Express";
-    } else {
+    string layanan;                      // Variabel untuk jenis layanan
+    if (jumlahpakaian <= 10) {           // Jika ≤ 10 pakaian
+        layanan = "Regular";             // Layanan Regular
+    } else if (jumlahpakaian <= 20) {    // Jika 11–20 pakaian
+        layanan = "Express";             // Layanan Express
+    } else {                             // Jika > 20 pakaian
         layanan = "Kapasitas mesin penuh, pisahkan cucian!";
     }
 
@@ -36,5 +36,5 @@ int main() {
     cout << "Total Biaya      : Rp " << total << endl;
     cout << "Jenis Layanan    : " << layanan << endl;
 
-    return 0;
+    return 0;   // Program selesai dengan sukses
 }
